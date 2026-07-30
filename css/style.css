@@ -56,6 +56,10 @@ section {
     margin-bottom: 5rem;
 }
 
+.contact h1 {
+    text-align: center;
+}
+
 .navbar-brand {
     font-size: 2rem;
 }
@@ -64,7 +68,7 @@ section {
     height: 40px;
 }
 
-.nav-item, #getAQuoteBtn {
+.nav-item {
     font-size: 1.5rem;
 }
 
@@ -142,7 +146,8 @@ section .content p {
 
 .service-item {
     background-color: lightblue;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease,
+        transform 0.5s ease-in-out;
     max-width: 20%;
     box-shadow: var(--box-shadow);
 }
@@ -153,25 +158,37 @@ section .content p {
 
 .service-item:hover {
     background-color: var(--blue);
-    animation: hoverScaleUp 0.8s ease;
+    transform: scale(1.1);
 }
 
-@keyframes hoverScaleUp {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
+form {
+    margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 3rem;
+    max-width: 75%;
 }
+
+.form-item {
+    margin: 0 auto;
+    width: 50%;
+}
+
+
 
 @media (max-width:1200px) {
-    .nav-item, #getAQuoteBtn {
+    .nav-item {
         font-size: 1rem;
+    }
+    form {
+        padding: 2rem;
+        max-width: 100%;
+    }
+    .form-item {
+        width: 75%;
     }
 }
 @media (max-width:992px) {
-    .nav-item, #getAQuoteBtn {
+    .nav-item {
         font-size: 0.8rem;
     }
     .btn-primary {
@@ -201,6 +218,13 @@ section .content p {
     }
     .service-item {
         max-width: 40%;
+    }
+    form {
+        margin: 0;
+        padding: 1rem;
+    }
+    .form-item {
+        width: 100%;
     }
 }
 

@@ -11,7 +11,7 @@
     --light-color: #666;
     --light-bg: #eee;
     --border: .2rem solid rgba(0, 0, 0, .1);
-    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 
 }
 
@@ -44,44 +44,190 @@ html {
     scroll-padding-top: 6.5rem;
 }
 
+body {
+    padding-top: 5rem;
+}
+
+p {
+    text-transform: none;
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-item, #getAQuoteBtn {
+    font-size: 1.5rem;
+}
+
 .nav-item a:hover {
     color: var(--blue);
 }
 
 .btn-primary {
-    background-color: var(--blue) !important;
+    white-space: nowrap;
     border: none;
+    font-size: 1rem;
+    padding: 10px 50px;
 }
 
 .home {
-    background: url(../images/clean-kitchen-3.jpg) no-repeat;
+    background: url(../images/clean-kitchen-1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.home .content h3 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--black);
+.show-content-sm {
+    display: none;
+}
+
+.hide-content-sm {
+    display: block;
 }
 
 .home .content {
     margin: 0 auto;
 }
 
+.home .content h3 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
 .home .content-bckgnd {
-    border-radius: 25px;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);                  /* Blurs the content behind the card */
     -webkit-backdrop-filter: blur(2px);          /* Safari support */
 }
 
+section .content span {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+section .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+section .content p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 2;
+}
+
+.services {
+    background-color: var(--light-bg);
+    padding: 1rem 0 3rem 0;
+}
+
+.services-list {
+    justify-content: space-around;
+}
+
+.service-item {
+    background-color: lightblue;
+    transition: background-color 0.3s ease;
+    max-width: 20%;
+    box-shadow: var(--box-shadow);
+}
+
+.service-image {
+    max-width: 100%;
+}
+
+.service-item:hover {
+    background-color: var(--blue);
+    animation: hoverScaleUp 0.8s ease;
+}
+
+@keyframes hoverScaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width:1200px) {
+    .nav-item, #getAQuoteBtn {
+        font-size: 1rem;
+    }
+}
 @media (max-width:992px) {
+    .nav-item, #getAQuoteBtn {
+        font-size: 0.8rem;
+    }
+    .btn-primary {
+        padding: 5px 10px;
+    }
     .home .row {
         min-height: 50vh;
     }
     .home .content h3 {
         font-size: 2rem;
+    }
+    section .content span {
+        font-size: 1.5rem;
+    }
+    section .content h3 {
+        font-size: 1.5rem;
+    }
+    section .content p {
+        color: var(--light-color);
+        line-height: 1.5;
+    }
+    .carousel-img {
+        display: none;
+    }
+    .services-list {
+        justify-content: space-around;
+    }
+    .service-item {
+        max-width: 40%;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        padding: 6rem 2rem 0 2rem;
+    }
+    .content-bckgnd .content {
+    text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #home-quote-btn {
+        padding: 0.5rem 3rem;
+        margin: 1rem;
+    }
+    .show-content-sm {
+        display: block;
+    }
+    .hide-content-sm {
+        display: none;
+    }  
+    .services-list {
+        justify-content: space-around;
+    }
+    .service-item {
+        max-width: 75%;
     }
 }

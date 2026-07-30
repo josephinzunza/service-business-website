@@ -15,19 +15,19 @@
     <body>
         
         <!-- navbar section starts -->
-        <nav class="navbar navbar-expand-md bg-body tertiary my-3 border-bottom">
+        <nav class="navbar navbar-expand-md bg-body tertiary py-3 border-bottom fixed-top">
             <div class="container">
                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="images/logo.svg" alt="logo" width="30" height="24" class="d-inline-block align-text-top">
+                    <img src="images/logo.svg" alt="logo" class="d-inline-block align-text-top">
                     Service Business
                 </a>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ms-auto me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
@@ -52,26 +52,90 @@
         <!-- navbar section ends -->
          
         <!-- home section starts -->
-
         <section class="home" id="home">
-
             <div class="row min-vh-75 align-items-center">
                 <div class="content-bckgnd">
-                    <div class="content col-xl-4 col-lg-6 col-md-8">
+                    <div class="content col-6 col-lg-4">
                         <h3>Let us make your home sparkle clean</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        <p class="hide-content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             Tempora quam ex doloremque inventore fuga, et eaque omnis
                             saepe ratione, deserunt quibusdam pariatur aliquid quas
                             magni in recusandae doloribus suscipit? Culpa.
                         </p>
-                        <a href="#quote" class="btn btn-primary">Get a Quote</a>
+                        <a href="#quote" class="btn btn-primary" id="home-quote-btn">Get a Quote</a>
                     </div>
                 </div>
             </div>
-
+        </section>
+        <section class="show-content-sm">
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Tempora quam ex doloremque inventore fuga, et eaque omnis
+                    saepe ratione, deserunt quibusdam pariatur aliquid quas
+                    magni in recusandae doloribus suscipit? Culpa.
+                </p>
+            </div>
         </section>
 
         <!-- home section ends -->
+        
+        <!-- about section starts -->
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 image">
+                        <img src="images/clean-kitchen-2.jpg" class="w-100 mb-4 mb-lg-0" alt="cleaner in front of a clean kitchen" />
+                    </div>
+                    <div class="col-lg-5 offset-lg-1 content">
+                        <span>About Us</span>
+                        <h3>A cleaning service you and your family can trust</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Harum amet repudiandae sed aperiam voluptas dolore,
+                            exercitationem delectus nemo maxime fugit nihil quas et
+                            deleniti optio animi, voluptatem eveniet, culpa quibusdam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section ends -->
+
+        <!-- services section starts -->
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="row align-items-center content">
+                    <span>Our Services</span>
+                    <h3>A wide variety of services that will make your house shine</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Harum amet repudiandae sed aperiam voluptas dolore,
+                        exercitationem delectus nemo maxime fugit nihil quas et
+                        deleniti optio animi, voluptatem eveniet, culpa quibusdam.</p>
+                </div>
+                <div class="row mt-3 d-flex">
+                    <div class="d-flex justify-content-center mb-3">
+                        <h3>Services Available</h3>
+                    </div>
+                    <div class="services-list d-flex flex-wrap align-items-center">
+                        <div class="service-item p-3 m-3 m-lg-0 rounded">
+                            <img src="images/cleaning-floor-v1.jpg" class="service-image mb-4 mb-lg-0" alt="cleaner cleaning floor with a floor sweeper"/>
+                            <h4 class="m-3">Service 1</h4>
+                        </div>
+                        <div class="service-item p-3 m-3 m-lg-0 rounded">
+                            <img src="images/house-for-sale-v1.jpg" class="service-image mb-4 mb-lg-0" alt="cleaner cleaning floor with a floor sweeper"/>
+                            <h4 class="m-3">Service 2</h4>
+                        </div>
+                        <div class="service-item p-3 m-3 m-lg-0 rounded">
+                            <img src="images/cleaning-window-v1.jpg" class="service-image mb-4 mb-lg-0" alt="cleaner cleaning floor with a floor sweeper"/>
+                            <h4 class="m-3">Service 3</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- services section ends -->
 
         <!-- bootstrap js file link -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
